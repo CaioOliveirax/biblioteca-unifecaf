@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniFECAF - Estrutura da Página</title>
+  <link rel="stylesheet" href="estrutura.css">
+</head>
+<body>
+
+  <!-- ===== CHECKBOX DO MENU MOBILE ===== -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- ===== 0. MENU FIXO (HEADER) ===== -->
+  <header>
+    <nav class="nav">
+      <a href="#topo" class="logo">UniFECAF</a>
+      <label for="menu-toggle" class="burger">☰</label>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== 1. BANNER PRINCIPAL COM CTA ===== -->
+  <section id="topo">
+    <h1>Título de impacto</h1>
+    <p>Texto de apoio do banner.</p>
+    <a href="#contato">Botão de call-to-action</a>
+  </section>
+
+  <!-- ===== 2. SOBRE A INSTITUIÇÃO ===== -->
+  <section id="sobre">
+    <h2>Sobre a instituição</h2>
+    <p>Texto institucional.</p>
+  </section>
+
+  <!-- ===== 3. CURSOS EM DESTAQUE ===== -->
+  <section id="cursos">
+    <h2>Cursos em destaque</h2>
+    <div class="grid-cursos">
+      <article class="card-curso">
+        <h3>Nome do curso</h3>
+        <p>Descrição curta.</p>
+      </article>
+      <!-- repita .card-curso para os demais cursos -->
+    </div>
+  </section>
+
+  <!-- ===== 4. DIFERENCIAIS ===== -->
+  <section id="diferenciais">
+    <h2>Diferenciais</h2>
+    <div class="grid-diferenciais">
+      <div class="card-dif">
+        <h3>Diferencial</h3>
+        <p>Descrição curta.</p>
+      </div>
+      <!-- repita .card-dif para os demais diferenciais -->
+    </div>
+  </section>
+
+  <!-- ===== 5. PERGUNTAS FREQUENTES (ACORDEÃO) ===== -->
+  <section id="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="acordeao">
+      <div class="faq-item">
+        <button class="faq-pergunta">Pergunta?</button>
+        <div class="faq-resposta">
+          <p>Resposta.</p>
+        </div>
+      </div>
+      <!-- repita .faq-item para as demais perguntas -->
+    </div>
+  </section>
+
+  <!-- ===== 6. DEPOIMENTOS (CARROSSEL) ===== -->
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="carrossel-depo">
+      <button class="depo-anterior">&#8592;</button>
+      <div class="depo-janela">
+        <div class="depo-trilho">
+          <div class="card-depo">
+            <p>Depoimento do aluno.</p>
+          </div>
+          <!-- repita .card-depo para os demais depoimentos -->
+        </div>
+      </div>
+      <button class="depo-proximo">&#8594;</button>
+    </div>
+    <div class="depo-dots" id="depo-dots"></div>
+  </section>
+
+  <!-- ===== 7. CONTATO ===== -->
+  <section id="contato">
+    <h2>Fale com a gente</h2>
+    <form id="form-contato" novalidate>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" required>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem"></textarea>
+
+      <button type="submit">Enviar</button>
+      <p class="msg-sucesso" id="msg-sucesso">Mensagem enviada!</p>
+    </form>
+  </section>
+
+  <!-- ===== 8. RODAPÉ ===== -->
+  <footer>
+    <p>&copy; 2026 UniFECAF. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+  <button id="voltar-topo">&uarr;</button>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="estrutura.js"></script>
+</body>
+</html>

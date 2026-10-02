@@ -1,0 +1,55 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; color: #1A1F29; }
+section { padding: 40px 20px; border-bottom: 1px dashed #ccc; }
+h1, h2, h3 { margin-bottom: 10px; }
+
+/* Menu fixo */
+header { position: fixed; top: 0; left: 0; right: 0; background: #fff; border-bottom: 1px solid #ddd; z-index: 100; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; }
+.nav-links { display: flex; gap: 20px; }
+.burger { display: none; cursor: pointer; }
+#menu-toggle { display: none; }
+#topo { margin-top: 70px; }
+
+/* Grids simples */
+.grid-cursos, .grid-diferenciais { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card-curso, .card-dif, .card-depo { border: 1px solid #ddd; padding: 16px; border-radius: 8px; }
+
+/* Acordeão */
+.faq-pergunta { width: 100%; text-align: left; padding: 12px; cursor: pointer; }
+.faq-resposta { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+
+/* Carrossel */
+.carrossel-depo { display: flex; align-items: center; gap: 12px; }
+.depo-janela { overflow: hidden; flex: 1; }
+.depo-trilho { display: flex; transition: transform .4s ease; }
+.depo-trilho .card-depo { flex: 0 0 100%; }
+.depo-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+.depo-dots button { width: 8px; height: 8px; border-radius: 50%; border: none; background: #ccc; }
+.depo-dots button.ativo { background: #333; }
+
+/* Formulário */
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+.msg-sucesso { display: none; color: green; }
+.msg-sucesso.mostrar { display: block; }
+
+/* Voltar ao topo */
+#voltar-topo { position: fixed; right: 20px; bottom: 20px; display: none; }
+#voltar-topo.visivel { display: block; }
+
+footer { padding: 20px; text-align: center; background: #f2f2f2; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .grid-cursos, .grid-diferenciais { grid-template-columns: repeat(2, 1fr); }
+  .nav-links {
+    position: fixed; top: 56px; left: 0; right: 0;
+    background: #fff; flex-direction: column; padding: 16px;
+    transform: translateY(-150%); transition: transform .25s ease;
+  }
+  #menu-toggle:checked ~ header .nav-links { transform: translateY(0); }
+  .burger { display: block; }
+}
+@media (max-width: 600px) {
+  .grid-cursos, .grid-diferenciais { grid-template-columns: 1fr; }
+}
